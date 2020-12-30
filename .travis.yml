@@ -7,3 +7,4 @@ branches:
    - prod
 script:
  - mvn test
+ - mvn package
