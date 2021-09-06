@@ -1,8 +1,5 @@
 language: java
-jdk: 
- - openjdk8
- - openjdk9
-
+jdk: openjdk8
 branches:
   only:
    - test
@@ -10,5 +7,3 @@ branches:
    - prod
 script:
  - mvn test
- - mvn package
-
