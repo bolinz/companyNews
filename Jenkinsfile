@@ -1,22 +1,14 @@
 pipeline {
     agent any 
+    triggers{
+        issueCommentTrigger('.*')
+    }
     stages{
         stage("test") {
             steps {
-                echo "test"
+                echo '${env.GITHUB_COMMENT}'
+                
             }
         }
     }
 }
-/*
-pipeline {
-    agent any
-    stages{
-        stage("test2") {
-            steps {
-                echo "456"
-            }
-        }
-    }
-}
-*/
